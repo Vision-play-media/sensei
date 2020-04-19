@@ -43,13 +43,15 @@
     "gulp-wp-pot": "2.4.0",
     "gulp-zip": "4.2.0",
     "jest": "25.0.0",
+    "jsdoc": "3.6.4",
     "mini-css-extract-plugin": "0.4.5",
     "node-sass": "4.13.0",
     "orchestrator": "0.3.8",
     "sass-loader": "7.3.1",
     "style-loader": "0.21.0",
     "webpack": "4.41.2",
-    "webpack-cli": "3.3.10"
+    "webpack-cli": "3.3.10",
+    "wp-hookdoc": "0.2.0"
   },
   "dependencies": {
     "select2": "4.0.5"
@@ -61,6 +63,7 @@
     "block-editor-assets": "cross-env NODE_ENV=production npx calypso-build --config webpack.block-editor-assets.config.js --env.WP",
     "block-editor-assets:dev": "npx calypso-build --config webpack.block-editor-assets.config.js --env.WP",
     "block-editor-assets:watch": "npx calypso-build --config webpack.block-editor-assets.config.js --env.WP --watch",
+    "build:docs": "rm -rf hookdocs/ && jsdoc -c hookdoc-conf.json",
     "lint-js": "./node_modules/eslint/bin/eslint.js assets/block-editor --ext=js,jsx",
     "lint-js:fix": "./node_modules/eslint/bin/eslint.js assets/block-editor --ext=js,jsx --fix",
     "lint-js-wpcom": "./node_modules/eslint-wpcom/bin/eslint.js --no-eslintrc --config .eslintrc.wpcom.json --ignore-path .eslintignore-wpcom ."
